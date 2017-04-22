@@ -6,8 +6,11 @@ Install Django. Look at Introduction to Django (tutorial) to download and instal
 
 Django is a web dev framework/platform that uses python to interact with databases.
 
+NOTE: you only need to do the folliwng steps to setup the database (via the django migration functionality) and run the webapp if you want to interact w/ the webapp directly. if you are only running simulations, you don't need to do this, as the simulations use the django test framework which sets up a test_xxx (e.g. test_dynamicfilter4 database and tables and runs the webapp using that. 
+
 After you get Django working you have to populate the database, the webapp will
-puke w/ errors if youdon't populate the database before running the webapp.
+puke w/ errors if you don't populate the database before running the webapp. Do this via:
+    `python manage.py migrate` -- Note that this may not be necessary to run the simulations, just to run the webapp in the terminal.
 
 Then run the postgres server with : postgres -D /usr/local/var/postgres 
 
